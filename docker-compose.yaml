@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  python:
+    build:
+
+      # Set context to top level directory.
+      # It is important to not use ./python as context
+      # otherwise some resources cannot be used,
+      # for example the requirements.txt file.
+      context: .
+
+      # specify the location of the Dockerfile
+      dockerfile: ./python/Dockerfile  
+
+    volumes:
+      - ./app:/app
+    
+    # for development:
+    # command: tail -f /dev/null
+    
+    # for demonstration: serve the fastapi page:
+    command: /bin/bash /app/serve.sh
