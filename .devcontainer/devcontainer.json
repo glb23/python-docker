@@ -1,0 +1,13 @@
+{
+    "name": "Dev Container",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "python",
+    "workspaceFolder": "/app",
+    "extensions": [
+        "ms-python.python"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "forwardPorts": [8080]
+}
